@@ -1,0 +1,81 @@
+﻿STRING 1
+{
+玩家 1
+}
+
+STRING 3
+// 单位: Hpal (圣骑士啊), Name (名字)
+{
+圣骑士啊
+}
+
+STRING 4
+// 单位: hpea (农民啊), Name (名字)
+{
+农民啊
+}
+
+STRING 5
+// 单位: qzu2 (|cffBA55D3我), Description (说明)
+{
+|cffBA55D3我
+}
+
+STRING 6
+// 单位: qzu2 (|cffBA55D3我), Name (名字)
+{
+|cffBA55D3我
+}
+
+STRING 7
+// 单位: qzu2 (|cffBA55D3我), Tip (提示工具 - 基础)
+{
+|cffBA55D3我
+}
+
+STRING 8
+// 单位: qzu2 (|cffBA55D3我), Ubertip (提示工具 - 扩展)
+{
+|cffBA55D3我
+}
+
+STRING 9
+{
+玩家 2
+}
+
+STRING 15
+{
+太阳基础图
+}
+
+STRING 16
+{
+1-4
+}
+
+STRING 18
+{
+太阳
+}
+
+STRING 19
+{
+敌人
+}
+
+STRING 20
+{
+good
+}
+
+STRING 21
+{
+bad
+}
+
+STRING 22
+{
+玩家 3
+}
+
