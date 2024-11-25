@@ -4,11 +4,13 @@ import ActorTypeUtil from "@/ActorTypeUtil"
 import ActorAbilityUtil from "@/ActorAbilityUtil"
 import SelectUtil from "@/SelectUtil"
 import {InitAbility} from "./init_actor/init_ability"
+import ActorUnitUtil from "@/ActorUnitUtil";
 /**
 	id = 自定义id
 	class = 类别
 	targetType = 目标类型
 	 passive = 是否被动技能
+	templateType = 模板
 	name = 名字
 	describe = 提示说明
 	icon = 图标
@@ -27,6 +29,7 @@ export type data_type = {
 	class?: string
 	targetType?: string
 	passive?: boolean
+	templateType?: string
 	name?: string
 	describe?: string
 	icon?: string
@@ -51,6 +54,7 @@ export const data: data_type[] = [
 		"class":"技能",
 		"targetType":"无目标",
 		"passive":true,
+		"templateType":"主动7",
 		"name":"极寒之触",
 		"describe":"|cff00ccff被动：攻击禁锢目标持续3秒，对目标单位造成攻击力*（20+英雄等级）伤害|n|n触发类型：攻击触发|n技能CD：15s|r",
 		"icon":"ReplaceableTextures\\CommandButtons\\BTNDarkRitual.blp",
@@ -67,10 +71,11 @@ export const data: data_type[] = [
 		"class":"技能",
 		"targetType":"点",
 		"passive":false,
+		"templateType":"主动9",
 		"name":"万箭齐发",
 		"describe":"|cff00ccff主动：向目标位置释放扇形箭矢20支，每支箭对路径敌人造成攻击力*10的伤害|n|n触发类型：主动选择目标点|n技能CD：10秒|r",
 		"icon":"ReplaceableTextures\\CommandButtons\\BTNBlizzard.blp",
-		"range":1000,
+		"range":10000,
 		"area":200,
 		"manaCost":0,
 		"hotKey":"Q",
@@ -83,6 +88,7 @@ export const data: data_type[] = [
 		"class":"技能",
 		"targetType":"无目标",
 		"passive":false,
+		"templateType":"Absk",
 		"name":"净化回血",
 		"describe":"|cff00ccff主动：净化周围队友和自己，并且恢复攻击力*10的生命值|n注意：被眩晕也能释放，可以解除眩晕|n|n触发类型：主动无目标释放|n技能CD：10秒|r",
 		"icon":"ReplaceableTextures\\CommandButtons\\BTNManaRecharge.blp",
@@ -92,6 +98,40 @@ export const data: data_type[] = [
 		"hotKey":"W",
 		"maxCd":10,
 		"x":1,
+		"y":2
+	},
+	{
+		"id":"寒冰E",
+		"class":"技能",
+		"targetType":"点",
+		"passive":false,
+		"templateType":"主动11",
+		"name":"暴风箭雨",
+		"describe":"|cff00ccff主动：发射大量箭雨打向远方，每支箭对路径敌人造成攻击力*10的伤害|n|n触发类型：主动选择目标点|n技能CD：15秒|r",
+		"icon":"ReplaceableTextures\\CommandButtons\\BTNFreezingBreath.blp",
+		"range":10000,
+		"area":200,
+		"manaCost":0,
+		"hotKey":"E",
+		"maxCd":20,
+		"x":2,
+		"y":2
+	},
+	{
+		"id":"寒冰R",
+		"class":"技能",
+		"targetType":"无目标",
+		"passive":false,
+		"templateType":"ANms",
+		"name":"多次攻击",
+		"describe":"|cff00ccff主动开启：开启技能后攻击敌人会额外发生三支箭矢打击目标，每支箭矢会对目标造成攻击力*5的伤害|n|n触发类型：主动开启并且普攻|r",
+		"icon":"ReplaceableTextures\\CommandButtons\\BTNColdArrows.blp",
+		"range":0,
+		"area":0,
+		"manaCost":0,
+		"hotKey":"R",
+		"maxCd":3,
+		"x":3,
 		"y":2
 	}
 ]
